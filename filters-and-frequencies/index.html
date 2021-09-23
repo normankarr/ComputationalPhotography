@@ -50,7 +50,7 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container" wfd-invisible="true">
-            <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="Prokudin-Gorskii.html" style="padding: 10px 0px;">Prokudin-Gorskii</a>
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="https://normankarr.com/computational-photography/prokudin-gorskii/" style="padding: 10px 0px;">Prokudin-Gorskii</a>
 </li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="https://normankarr.com/computational-photography/filters-and-frequencies/" style="padding: 10px 0px;">Filters and Frequencies</a>
 </li></ul>
           </div>
@@ -58,7 +58,7 @@
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Prokudin-Gorskii.html" style="padding: 10px 0px;">Prokudin-Gorskii</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://normankarr.com/computational-photography/prokudin-gorskii/" style="padding: 10px 0px;">Prokudin-Gorskii</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://normankarr.com/computational-photography/filters-and-frequencies/" style="padding: 10px 0px;">Filters and Frequencies</a>
 </li></ul>
               </div>
@@ -78,7 +78,7 @@
       </div>
     </section>
     <section class="u-clearfix u-white u-section-2" id="sec-5e29">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-align-center u-text u-text-1">Table of Contents</h1>
         <div class="u-expanded-width u-list u-list-1">
           <div class="u-repeater u-repeater-1">
@@ -125,17 +125,13 @@
     </section>
     <section class="u-clearfix u-white u-section-3" id="sec-fc50">
       <div class="u-expanded-width u-palette-1-light-3 u-shape u-shape-rectangle u-shape-1"></div>
+      <h1 class="u-text u-text-default u-text-1">
+        <span style="font-weight: 700;">Fun with Filters</span>
+        <br>
+      </h1>
+      <h2 class="u-text u-text-default u-text-2">1. Finite Difference Operators</h2>
+      <p class="u-text u-text-3">The first filters I experimented with are the primitive difference operators Dx and Dy. Convolving an image with Dx should produce activations where there are vertical edges and convolving with Dy should produce activations where there are horizontal edges. Additionally, if we add together these two gradients, we should get a rough outline of the image. Unfortunately, since images tend to be noisy, we first attempt to remove some of the noise by thresholding the activations. I found that zeroing any activations below a threshold of 0.25 performed well at minimizing noise. The results of these convolutions are displayed below.</p>
       <div class="u-container-style u-group u-group-1">
-        <div class="u-container-layout">
-          <h1 class="u-text u-text-default u-text-1">
-            <span style="font-weight: 700;">Fun with Filters</span>
-            <br>
-          </h1>
-          <h2 class="u-text u-text-default u-text-2">1. Finite Difference Operators</h2>
-          <p class="u-text u-text-3">The first filters I experimented with are the primitive difference operators Dx and Dy. Convolving an image with Dx should produce activations where there are vertical edges and convolving with Dy should produce activations where there are horizontal edges. Additionally, if we add together these two gradients, we should get a rough outline of the image. Unfortunately, since images tend to be noisy, we first attempt to remove some of the noise by thresholding the activations. I found that zeroing any activations below a threshold of 0.25 performed well at minimizing noise. The results of these convolutions are displayed below.</p>
-        </div>
-      </div>
-      <div class="u-container-style u-group u-group-2">
         <div class="u-container-layout">
           <img class="u-image u-image-default u-image-1" src="images/ScreenShot2021-09-20at9.04.27PM.png" alt="" data-image-width="318" data-image-height="188">
           <img class="u-image u-image-default u-image-2" src="images/ScreenShot2021-09-20at9.04.34PM.png" alt="" data-image-width="404" data-image-height="124">
@@ -144,25 +140,25 @@
       <div class="u-list u-list-1">
         <div class="u-repeater u-repeater-1">
           <div class="u-container-style u-list-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-container-layout-3">
+            <div class="u-container-layout u-similar-container u-container-layout-2">
               <img alt="" class="u-expanded-width u-image u-image-default u-image-3" data-image-width="540" data-image-height="542" src="images/cameraman.png">
               <h5 class="u-text u-text-default u-text-4">Original Image</h5>
             </div>
           </div>
           <div class="u-container-style u-list-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-container-layout-4">
+            <div class="u-container-layout u-similar-container u-container-layout-3">
               <img alt="" class="u-expanded-width u-image u-image-default u-image-4" data-image-width="540" data-image-height="542" src="images/cameramanx1.png">
               <h5 class="u-text u-text-default u-text-5">Convolved with Dx</h5>
             </div>
           </div>
           <div class="u-container-style u-list-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-container-layout-5">
+            <div class="u-container-layout u-similar-container u-container-layout-4">
               <img alt="" class="u-expanded-width u-image u-image-default u-image-5" data-image-width="540" data-image-height="542" src="images/cameramany1.png">
               <h5 class="u-text u-text-default u-text-6">Convolved with Dy</h5>
             </div>
           </div>
           <div class="u-container-style u-list-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-container-layout-6">
+            <div class="u-container-layout u-similar-container u-container-layout-5">
               <img alt="" class="u-expanded-width u-image u-image-default u-image-6" data-image-width="540" data-image-height="542" src="images/cameramantot1.png">
               <h5 class="u-text u-text-default u-text-7">Sum of Gradx and Grady</h5>
             </div>
@@ -172,29 +168,25 @@
     </section>
     <section class="u-clearfix u-white u-section-4" id="sec-cf10">
       <div class="u-expanded-width u-palette-1-light-3 u-shape u-shape-rectangle u-shape-1"></div>
-      <div class="u-container-style u-group u-group-1">
-        <div class="u-container-layout">
-          <h2 class="u-text u-text-default u-text-1">2. Derivative of Gaussians</h2>
-          <p class="u-text u-text-2">Above, we solved the noise issue using thresholding. However, there is a better way to minimize noise: low-pass filtering. We first filter out the high frequencies by applying a Gaussian kernel then applying the derivative kernels. Luckily, since convolution is associative, we just just convolve the derivative filter with the gaussian filter and use these new filters are our low-pass edge detectors.</p>
-        </div>
-      </div>
+      <h2 class="u-text u-text-default u-text-1">2. Derivative of Gaussians</h2>
+      <p class="u-text u-text-2">Above, we solved the noise issue using thresholding. However, there is a better way to minimize noise: low-pass filtering. We first filter out the high frequencies by applying a Gaussian kernel then applying the derivative kernels. Luckily, since convolution is associative, we just just convolve the derivative filter with the gaussian filter and use these new filters are our low-pass edge detectors.</p>
       <h2 class="u-text u-text-default u-text-3">Filters</h2>
       <div class="u-list u-list-1">
         <div class="u-repeater u-repeater-1">
           <div class="u-container-style u-list-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-container-layout-2">
+            <div class="u-container-layout u-similar-container u-container-layout-1">
               <img alt="" class="u-image u-image-default u-image-1" data-image-width="11" data-image-height="11" src="images/gaussian_kernel2.png">
               <p class="u-text u-text-default u-text-4">Gaussian Kernel</p>
             </div>
           </div>
           <div class="u-container-style u-list-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-container-layout-3">
+            <div class="u-container-layout u-similar-container u-container-layout-2">
               <img alt="" class="u-image u-image-contain u-image-default u-image-2" data-image-width="12" data-image-height="11" src="images/bdx1.png">
               <p class="u-text u-text-default u-text-5">Gaussian convolved with Dx (DxoG)</p>
             </div>
           </div>
           <div class="u-container-style u-list-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-container-layout-4">
+            <div class="u-container-layout u-similar-container u-container-layout-3">
               <img alt="" class="u-image u-image-contain u-image-default u-image-3" data-image-width="11" data-image-height="12" src="images/bdy1.png">
               <p class="u-text u-text-default u-text-6">Gaussian convolved with Dy (DyoG)</p>
             </div>
@@ -205,19 +197,19 @@
       <div class="u-list u-list-2">
         <div class="u-repeater u-repeater-2">
           <div class="u-align-center u-container-style u-list-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-container-layout-5">
+            <div class="u-container-layout u-similar-container u-container-layout-4">
               <img alt="" class="u-image u-image-default u-image-4" data-image-width="540" data-image-height="542" src="images/cameramanbdx.png">
               <p class="u-text u-text-default u-text-8">DxoG convolved with Cameraman</p>
             </div>
           </div>
           <div class="u-align-center u-container-style u-list-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-container-layout-6">
+            <div class="u-container-layout u-similar-container u-container-layout-5">
               <img alt="" class="u-image u-image-contain u-image-default u-image-5" data-image-width="540" data-image-height="542" src="images/cameramanbdy.png">
               <p class="u-text u-text-default u-text-9"> DyoG convolved with Cameraman</p>
             </div>
           </div>
           <div class="u-align-center u-container-style u-list-item u-repeater-item">
-            <div class="u-container-layout u-similar-container u-container-layout-7">
+            <div class="u-container-layout u-similar-container u-container-layout-6">
               <img alt="" class="u-image u-image-contain u-image-default u-image-6" data-image-width="540" data-image-height="542" src="images/cameramanbdtot.png">
               <p class="u-text u-text-default u-text-10">DxoG + DyoG convolved with Cameraman</p>
             </div>
@@ -909,5 +901,16 @@
         <p class="u-small-text u-text u-text-variant u-text-1">CS 194-26: Computational Photography and Computer Vision<br>Project 2: Fun with Filters and Frequencies<br>Norman Karr | nkarr11@berkeley.edu | UC Berkeley
         </p>
       </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="https://nicepage.com/" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section>
   </body>
 </html>
