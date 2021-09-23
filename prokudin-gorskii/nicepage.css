@@ -34256,16 +34256,7 @@ a.u-link.u-text-hover-grey-90:hover {
   margin: -27px auto 0px 300px;
   padding: 0;
 }
-
 @media (max-width: 1199px) {
-  .u-header .u-menu-1 {
-    width: auto;
-  }
-
-  .u-header .u-btn-1 {
-    margin-top: 00px;
-  }
-
   .u-header .u-btn-2 {
     margin-left: 0;
   }
