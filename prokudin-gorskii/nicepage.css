@@ -27144,6 +27144,17 @@ li.active > a.u-button-style.u-button-style.u-border-active-palette-1-light-3 {
   border-color: #f99370;
   stroke: #f99370;
 }
+.u-button-style.u-border-palette-0-base {
+  border-color: #555 !important;
+  color: #555 !important;
+  background-color: transparent !important;
+}
+.u-button-style.u-border-palette-0-base:hover,
+.u-button-style.u-border-palette-0-base:focus {
+  border-color: transparent !important;
+  color: #000 !important;
+  background-color: transparent !important;
+}
 .u-button-style.u-border-palette-1-base {
   border-color: #f99370 !important;
   color: #f99370 !important;
@@ -34229,23 +34240,30 @@ a.u-link.u-text-hover-grey-90:hover {
 .u-header .u-btn-1 {
   background-image: none;
   border-style: none none solid;
-  margin: -29px auto 0 0;
+  margin: -27px auto 0 0;
   padding: 0;
 }
 
 .u-header .u-btn-2 {
   background-image: none;
   border-style: none none solid;
-  margin: -27px auto 9px 144px;
+  margin: -27px auto 0px 139px;
   padding: 0;
 }
+.u-header .u-btn-3 {
+  background-image: none;
+  border-style: none none solid;
+  margin: -27px auto 0px 300px;
+  padding: 0;
+}
+
 @media (max-width: 1199px) {
   .u-header .u-menu-1 {
     width: auto;
   }
 
   .u-header .u-btn-1 {
-    margin-top: -29px;
+    margin-top: 00px;
   }
 
   .u-header .u-btn-2 {
