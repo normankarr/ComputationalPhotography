@@ -215,7 +215,7 @@
     </section>
     <section class="u-clearfix u-section-6" id="sec-5a2d">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-gutter-10 u-layout-wrap u-layout-wrap-1">
+        <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
             <div class="u-layout-col">
               <div class="u-size-30">
@@ -249,6 +249,50 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="u-subtitle u-text u-text-default u-text-5">
+          <span style="font-weight: 400;">4. Varying Hyperparameters</span>
+          <br>
+        </h2>
+        <p class="u-text u-text-6">The first variable I varied was the learning rate. Pictured below are the different training curves of each run. 1e-3 converged the fastest; 1e-4 was able to converge slightly slower than 1e-3; 1e-5 trained much slower but eventually still converged.</p>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-5">
+                <img alt="" class="u-expanded-width u-image u-image-contain u-image-default u-image-5" data-image-width="392" data-image-height="278" src="images/lr1.png">
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-6">
+                <img alt="" class="u-expanded-width u-image u-image-contain u-image-default u-image-6" data-image-width="392" data-image-height="278" src="images/lr2.png">
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-7">
+                <img alt="" class="u-expanded-width u-image u-image-contain u-image-default u-image-7" data-image-width="392" data-image-height="278" src="images/lr31.png">
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="u-text u-text-7">The second variable I varied was number of channels per layer. Overall, it seemed that more channels trained faster. This is counter-intuitive for me because I would have thought that more parameters would take longer to train.</p>
+        <div class="u-expanded-width u-list u-list-2">
+          <div class="u-repeater u-repeater-2">
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-8">
+                <img alt="" class="u-expanded-width u-image u-image-contain u-image-default u-image-8" data-image-width="392" data-image-height="278" src="images/ch1.png">
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-9">
+                <img alt="" class="u-expanded-width u-image u-image-contain u-image-default u-image-9" data-image-width="392" data-image-height="278" src="images/ch2.png">
+              </div>
+            </div>
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-10">
+                <img alt="" class="u-expanded-width u-image u-image-contain u-image-default u-image-10" data-image-width="392" data-image-height="278" src="images/ch3.png">
               </div>
             </div>
           </div>
@@ -518,10 +562,10 @@
             </div>
           </div>
         </div>
-        <img class="u-image u-image-default u-image-3" src="images/test_results2.png" alt="" data-image-width="1144" data-image-height="568">
+        <img class="u-image u-image-default u-image-3" src="images/model2.png" alt="" data-image-width="1144" data-image-height="568">
         <p class="u-align-center u-custom-item u-large-text u-text u-text-default u-text-variant u-text-4">Test Data Results<br>(Blue = Predictions)
         </p>
-        <p class="u-align-left u-large-text u-text u-text-variant u-text-5">Pictured above are the results of the trained model. Training data and validation data are both very accurate however there are some clear failures in the test data. Many of the failures in the test data happen in the images that have multiple people or have faces that are small in the frame. This is likely because the training data all was cropped to have images of singular faces where the face is most of the frame. The same augmentation was not possibly with test data because test data lacked accurate bounding boxes.</p>
+        <p class="u-align-left u-large-text u-text u-text-variant u-text-5">Pictured above are the results of the trained model. Training data and validation data are both very accurate. Most surprisingly is how well it does on test data. The test data does well despite the wide variety of face sizes. I personally would think that all the rescaling would lose some detail in facial structure but the model still appears robust to it.</p>
       </div>
     </section>
     <section class="u-clearfix u-section-14" id="sec-9086">
