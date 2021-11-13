@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Keypoint Detection</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Keypoint-Detection.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.24.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Site1"
+}</script>
+    <meta name="theme-color" content="#ec8700">
+    <meta property="og:title" content="Keypoint Detection">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-87a3"><div class="u-clearfix u-sheet u-sheet-1">
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XL">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+            <a class="u-button-style u-custom-active-border-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</symbol>
+</defs></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container" wfd-invisible="true">
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="https://normankarr.com/computational-photography/prokudin-gorskii/" style="padding: 10px 0px;">Prokudin-Gorskii</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="https://normankarr.com/computational-photography/filters-and-frequencies/" style="padding: 10px 0px;">Filters and Frequencies</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="https://normankarr.com/computational-photography/face-morphing/" style="padding: 10px 0px;">Face Morphing</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="https://normankarr.com/computational-photography/mosaics/" style="padding: 10px 0px;">Mosaics</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90" href="normankarr.com/computational-photography/keypoint-detection" style="padding: 10px 0px;">Keypoint Detection</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://normankarr.com/computational-photography/prokudin-gorskii/" style="padding: 10px 0px;">Prokudin-Gorskii</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://normankarr.com/computational-photography/filters-and-frequencies/" style="padding: 10px 0px;">Filters and Frequencies</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://normankarr.com/computational-photography/face-morphing/" style="padding: 10px 0px;">Face Morphing</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://normankarr.com/computational-photography/mosaics/" style="padding: 10px 0px;">Mosaics</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="normankarr.com/computational-photography/keypoint-detection" style="padding: 10px 0px;">Keypoint Detection</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70" wfd-invisible="true"></div>
+          </div>
+        </nav>
+        <a href="https://normankarr.com/computational-photography/prokudin-gorskii/" class="u-active-none u-border-2 u-border-grey-80 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-btn-1">Prokudin Gorskii</a>
+        <a href="https://normankarr.com/computational-photography/filters-and-frequencies/" class="u-active-none u-border-2 u-border-grey-80 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-btn-2">Filters and Frequencies</a>
+        <a href="https://normankarr.com/computational-photography/face-morphing/" class="u-active-none u-border-2 u-border-grey-80 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-btn-3">Face Morphing</a>
+        <a href="https://normankarr.com/computational-photography/mosaics/" class="u-active-none u-border-2 u-border-grey-80 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-btn-4">Mosaics</a>
+        <a href="https://normankarr.com/computational-photography/keypoint-detection/" class="u-active-none u-border-2 u-border-grey-80 u-btn u-btn-rectangle u-button-style u-hover-none u-none u-radius-0 u-btn-5">Keypoint Detection</a>
+      </div></header>
+    <section class="u-clearfix u-valign-top u-white u-section-1" id="sec-701b">
+      <div class="u-black u-container-style u-expanded-width u-group u-shape-rectangle u-group-1">
+        <div class="u-container-layout u-container-layout-1">
+          <div class="u-list u-list-1">
+            <div class="u-repeater u-repeater-1"></div>
+          </div>
+          <div class="u-container-style u-group u-opacity u-opacity-85 u-shape-rectangle u-white u-group-2">
+            <div class="u-container-layout u-valign-top u-container-layout-2">
+              <h6 class="u-text u-text-default u-text-1">CS194-26 Project 5</h6>
+              <h1 class="u-align-center u-custom-font u-font-merriweather u-text u-text-default u-text-2">Keypoint Detection with Neural Networks<span style="font-weight: 700;"></span>
+              </h1>
+              <h6 class="u-custom-font u-font-merriweather u-text u-text-default u-text-3">Norman Karr | nkarr11@berkeley.edu</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="u-image u-image-default u-image-1" src="images/overfit_meme.jpg" alt="" data-image-width="1015" data-image-height="1026">
+    </section>
+    <section class="u-clearfix u-grey-70 u-section-2" id="sec-329e">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-align-center u-text u-text-1">Table of Contents</h1>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-style u-custom-item u-grey-15 u-list-item u-repeater-item u-list-item-1">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                <img alt="" class="u-image u-image-contain u-image-default u-image-1" data-image-width="250" data-image-height="188" src="images/ScreenShot2021-11-12at7.23.42AM.png">
+                <h3 class="u-text u-text-default u-text-2">
+                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-90 u-btn-1" href="Filters-and-Frequencies.html#sec-fc50" data-page-id="1890410318">Single Point Detection</a>
+                </h3>
+                <p class="u-text u-text-3">1. Dataset<br>2. Model and Training<br>3. Results<br>
+                  <br>
+                </p>
+              </div>
+            </div>
+            <div class="u-container-style u-custom-item u-grey-10 u-list-item u-repeater-item u-list-item-2">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+                <img alt="" class="u-image u-image-default u-image-2" data-image-width="528" data-image-height="396" src="images/ScreenShot2021-11-12at8.06.29AM.png">
+                <h3 class="u-text u-text-default u-text-4">
+                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-90 u-btn-2" href="Filters-and-Frequencies.html#sec-29c1" data-page-id="1890410318">Multi-point Regression</a>
+                </h3>
+                <p class="u-text u-text-5">1. Data Transformations<br>2. Model and Training<br>3. Results<br>4. Kernel Visualization
+                </p>
+              </div>
+            </div>
+            <div class="u-container-style u-custom-item u-grey-5 u-list-item u-repeater-item u-list-item-3">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                <img alt="" class="u-image u-image-contain u-image-default u-image-3" data-image-width="836" data-image-height="788" src="images/ScreenShot2021-11-12at7.04.50PM.png">
+                <h3 class="u-text u-text-default u-text-6">
+                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-90 u-btn-3" href="Filters-and-Frequencies.html#sec-e59b" data-page-id="1890410318">Training on Large Dataset<br>
+                  </a>
+                </h3>
+                <p class="u-text u-text-7">1. Dataset and Preprocessing<br>2. Model and Training<br>3. Results
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-white u-section-3" id="sec-c9b4">
+      <div class="u-black u-expanded-width u-shape u-shape-rectangle u-shape-1"></div>
+      <h1 class="u-text u-text-default u-text-white u-text-1">
+        <span style="font-weight: 700;">Single Point Detection</span>
+        <br>
+      </h1>
+      <p class="u-text u-text-2">The initial task is to detect just a single key point, the tip of a person's nose. The steps I will take to do this are to first collect a dataset of faces with an annotated nose key point. Then I will train a simple network to predict the x and y coordinate of the key point.&nbsp;<br>
+      </p>
+      <h2 class="u-subtitle u-text u-text-default u-text-3">
+        <span style="font-weight: 400;">1. Dataset</span>
+        <br>
+      </h2>
+      <p class="u-text u-text-4">The dataset I will be using is the IMM Face Database with has 240 images of faces with 58 annotated keypoints each. However, for this part, we will only concern ourselves with the nose tip key point.&nbsp;For splits, I went with a 80-20 split for training vs validation data thus I train on 192 images and validate on 48 images.<br>
+        <br>For preprocessing, I first resize the images from their original size of (480, 640) to a smaller size of (60, 80). Each image is also grayscaled and then normalized to have pixel values in the range of (-0.5, 0.5). I also recalculate the labels to be relative coordinates (i.e. the keypoint (x, y) would be represented as a ratio of the image width and height). This way, the label values range from 0-1 which helps improve training by bounding the loss.
+      </p>
+      <img class="u-image u-image-default u-image-1" src="images/part1_ex.png" alt="" data-image-width="1144" data-image-height="220">
+      <p class="u-align-center u-text u-text-5">Pictured above is a variety of example data images and their corresponding nose tip key points<br>
+      </p>
+    </section>
+    <section class="u-clearfix u-white u-section-4" id="sec-4ece">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-subtitle u-text u-text-default u-text-1">
+          <span style="font-weight: 400;">2. Model and Training</span>
+          <br>
+        </h2>
+        <p class="u-text u-text-2">Since the images are relatively small and we are only predicting a singular point, it is sufficient to train a relatively small convolutional neural network. Pictured below is the model architecture and hyperparameters used.</p>
+        <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-valign-top u-container-layout-1">
+                  <p class="u-large-text u-text u-text-default u-text-variant u-text-3">Model Architecture</p>
+                  <p class="u-large-text u-text u-text-default u-text-variant u-text-4">Layer 1: 1x16x3x3 Conv -&gt; 2x2 MaxPool -&gt; ReLU<br>Layer 2: 1x32x3x3 Conv -&gt; 2x2 MaxPool -&gt; ReLU<br>Layer 3: 32x32x3x3 Conv -&gt; 2x2 MaxPool -&gt; ReLU<br>Layer 4: 32x32x3x3 Conv -&gt; 2x2 MaxPool -&gt; ReLU<br>Layer 5: 96x64 Linear -&gt; ReLU<br>Layer 6: 64x2 ​Linear
+                  </p>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <p class="u-large-text u-text u-text-default u-text-variant u-text-5">Training Parameters</p>
+                  <p class="u-large-text u-text u-text-default u-text-variant u-text-6">Input Image Size: 60x80<br>Optimizer: Adam<br>Loss Function: MSE<br>Learning Rate: 1e-3<br>Batch Size: 4<br>Number of Epochs: 15
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-white u-section-5" id="sec-277e">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-subtitle u-text u-text-default u-text-1">
+          <span style="font-weight: 400;">3. Results</span>
+          <br>
+        </h2>
+        <img class="u-image u-image-default u-image-1" src="images/part1_results.png" alt="" data-image-width="2152" data-image-height="434">
+        <p class="u-align-center u-text u-text-2">Pictured above are the results of my neural network.&nbsp;The blue dot is the true label and the orange dot is the prediction. The top row of images are images from training and the bottom row are images from the validation set.</p>
+        <div class="u-clearfix u-gutter-0 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout" style="">
+            <div class="u-layout-row" style="">
+              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-27 u-size-xs-60 u-white u-layout-cell-1" src="">
+                <div class="u-container-layout u-container-layout-1">
+                  <h2 class="u-text u-text-default u-text-3">Training History</h2>
+                  <p class="u-text u-text-4">Pictured on the left is the loss history of the model while training. Since validation loss is normally just slightly higher than training loss, this means our model is not overfitting and is generalizing well.&nbsp;<br>
+                    <br>**Note that training error is calculated as a running error while training which is was causes the initial spike**
+                  </p>
+                </div>
+              </div>
+              <div class="u-align-center u-container-style u-image u-image-contain u-layout-cell u-right-cell u-size-33 u-size-xs-60 u-image-2" src="" data-image-width="856" data-image-height="614">
+                <div class="u-container-layout u-valign-middle u-container-layout-2" src=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-6" id="sec-5a2d">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-gutter-10 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1" src="">
+                    <div class="u-container-layout u-valign-bottom u-container-layout-1">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/ScreenShot2021-11-12at7.23.30AM.png" alt="" data-image-width="254" data-image-height="190">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-2" src="images/ScreenShot2021-11-12at7.23.42AM.png" alt="" data-image-width="250" data-image-height="188">
+                    </div>
+                  </div>
+                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                    <div class="u-container-layout u-container-layout-2">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-3" src="images/ScreenShot2021-11-12at7.24.13AM.png" alt="" data-image-width="248" data-image-height="188">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-4" src="images/ScreenShot2021-11-12at7.23.59AM.png" alt="" data-image-width="252" data-image-height="190">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-3">
+                    <div class="u-container-layout u-container-layout-3">
+                      <h2 class="u-align-center u-text u-text-1">Two Successes</h2>
+                      <p class="u-align-left u-text u-text-2">Pictured above were two apparent succcesses. One theory I have for why these succeeded is due to the clear one-sided lighting. This lighting makes it easy to find the midway point of the face and then model just has to find the point along the vertical.</p>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-4" src="">
+                    <div class="u-container-layout u-valign-top u-container-layout-4">
+                      <h2 class="u-align-center u-text u-text-3">Two Failures</h2>
+                      <p class="u-align-left u-text u-text-4">Pictured above were two apparent failures. I believe these failed because they did not have a clear one-sided lighting like the two successes. This extra complexity likely is what makes it difficult for our small model to make predictions as accurately.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-white u-section-7" id="sec-2386">
+      <div class="u-black u-expanded-width u-shape u-shape-rectangle u-shape-1"></div>
+      <h1 class="u-text u-text-default u-text-white u-text-1">
+        <span style="font-weight: 700;">Multi-Point Regression</span>
+        <br>
+      </h1>
+      <p class="u-text u-text-2">The dataset we are using has 58 annotated keypoints, so let's see if we can predict all 58 points. To do this, we not only need a larger model, but we are going to need a larger dataset; 192 images is not enough to properly fit 58 points. Thus we are going introduce data augmentations to pseudo-increase the size of our dataset.</p>
+      <h2 class="u-subtitle u-text u-text-default u-text-3">
+        <span style="font-weight: 400;">1. Data Augmentations</span>
+        <br>
+      </h2>
+      <p class="u-text u-text-4">The general idea of data augmentatin is simple: randomly augment our data as it is being loaded into the training loop. This will make it so that we rarely train on exactly the same image and will help us generalize. The data augmentations I chose to use were random color jitters and random rotations and translations.<br>
+        <br>Pictured below are examples of random transformations applied to a single image.
+      </p>
+      <img class="u-image u-image-default u-image-1" src="images/example_transformations.png" alt="" data-image-width="2152" data-image-height="884">
+    </section>
+    <section class="u-clearfix u-white u-section-8" id="sec-e236">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-subtitle u-text u-text-default u-text-1">
+          <span style="font-weight: 400;">2. Model and Training</span>
+          <br>
+        </h2>
+        <p class="u-text u-text-2">For this part, I tried two different models: a medium sized model and a large model. Additionally, I introduced a dropout layer after each convolution to help prevent overfitting.</p>
+        <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-size-34 u-layout-cell-1">
+                    <div class="u-container-layout u-container-layout-1">
+                      <p class="u-large-text u-text u-text-default u-text-variant u-text-3">Medium Model Architecture</p>
+                      <p class="u-large-text u-text u-text-default u-text-variant u-text-4">Layer 1: 1x64x5x5 Conv -&gt; 2x2 MaxPool -&gt; ReLU -&gt; Dropout<br>Layer 2: 64x64x3x3 Conv -&gt; 2x2 MaxPool -&gt; ReLU -&gt; Dropout<br>Layer 3: 64x32x3x3 Conv -&gt; 2x2 MaxPool -&gt; ReLU -&gt; Dropout<br>Layer 4: 32x32x3x3 Conv -&gt; 2x2 MaxPool -&gt; ReLU -&gt; Dropout<br>Layer 5: 32x32x3x3 Conv -&gt; 2x2 MaxPool -&gt; ReLU -&gt; Dropout<br>Layer 6: 1280x512 Linear -&gt; ReLU<br>Layer 7: 512x116 ​Linear
+                      </p>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-26 u-layout-cell-2">
+                    <div class="u-container-layout u-valign-top u-container-layout-2">
+                      <p class="u-large-text u-text u-text-default u-text-variant u-text-5">Medium Model Training Parameters</p>
+                      <p class="u-large-text u-text u-text-default u-text-variant u-text-6">Input Image Size:&nbsp;240x320<br>Optimizer: Adam<br>Loss Function: MSE<br>Learning Rate: 1e-3<br>Batch Size: 2<br>Number of Epochs: 20<br>Dropout Probability: 0.2
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-size-34 u-layout-cell-3">
+                    <div class="u-container-layout u-container-layout-3">
+                      <p class="u-large-text u-text u-text-default u-text-variant u-text-7">Large Model Architecture</p>
+                      <p class="u-large-text u-text u-text-default u-text-variant u-text-8">Layer 1: 1x128x5x5 Conv -&gt; 2x2 MaxPool -&gt; ReLU -&gt; Dropout<br>Layer 2: 128x128x3x3 Conv -&gt; 2x2 MaxPool -&gt; ReLU -&gt; Dropout<br>Layer 3: 128x64x3x3 Conv -&gt; 2x2 MaxPool -&gt; ReLU -&gt; Dropout<br>Layer 4: 64x64x3x3 Conv -&gt; 2x2 MaxPool -&gt; ReLU -&gt; Dropout<br>Layer 5: 64x32x3x3 Conv -&gt; 2x2 MaxPool -&gt; ReLU -&gt; Dropout<br>Layer 6: 1280x512 Linear -&gt; ReLU<br>Layer 7: 512x116 ​Linear
+                      </p>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-26 u-layout-cell-4">
+                    <div class="u-container-layout u-container-layout-4">
+                      <p class="u-large-text u-text u-text-default u-text-variant u-text-9">Medium Model Training Parameters</p>
+                      <p class="u-large-text u-text u-text-default u-text-variant u-text-10">Input Image Size:&nbsp;240x320<br>Optimizer: Adam<br>Loss Function: MSE<br>Learning Rate: 1e-3<br>Batch Size: 4<br>Number of Epochs: 35<br>Dropout Probability: 0.2
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-white u-section-9" id="sec-5161">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h2 class="u-subtitle u-text u-text-default u-text-1">
+          <span style="font-weight: 400;">3. Results</span>
+          <br>
+        </h2>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <img class="u-image u-image-default u-image-1" src="images/part2_train_results.png" alt="" data-image-width="2206" data-image-height="918">
+                <p class="u-align-center u-custom-item u-large-text u-text u-text-default u-text-variant u-text-2">Results of the medium neural network on the training data.</p>
+              </div>
+            </div>
+            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-2">
+                <img class="u-image u-image-default u-image-2" src="images/large_model_train_results.png" alt="" data-image-width="1600" data-image-height="666">
+                <p class="u-align-center u-custom-item u-large-text u-text u-text-default u-text-variant u-text-3">Results of the large neural network on the training data.</p>
+              </div>
+            </div>
+            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <img class="u-image u-image-default u-image-3" src="images/part2_validation_results.png" alt="" data-image-width="1600" data-image-height="666">
+                <p class="u-align-center u-custom-item u-large-text u-text u-text-default u-text-variant u-text-4">Results of the medium neural network on the validation data.&nbsp;</p>
+              </div>
+            </div>
+            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-4">
+                <img class="u-image u-image-default u-image-4" src="images/large_model_val_results.png" alt="" data-image-width="1600" data-image-height="667">
+                <p class="u-align-center u-custom-item u-large-text u-text u-text-default u-text-variant u-text-5">Results of the large neural network on the validation data.</p>
+              </div>
+            </div>
+            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-5">
+                <img class="u-image u-image-contain u-image-default u-image-5" src="images/part2_training_hist.png" alt="" data-image-width="402" data-image-height="278">
+                <p class="u-align-center u-custom-item u-large-text u-text u-text-default u-text-variant u-text-6">Training history of medium neural network</p>
+              </div>
+            </div>
+            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-6">
+                <img class="u-image u-image-contain u-image-default u-image-6" src="images/large_model_hist.png" alt="" data-image-width="780" data-image-height="552">
+                <p class="u-align-center u-custom-item u-large-text u-text u-text-default u-text-variant u-text-7">Results of the large neural network on the validation data.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-10" id="sec-06ff">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-gutter-10 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1" src="">
+                    <div class="u-container-layout u-valign-bottom u-container-layout-1">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/ScreenShot2021-11-12at8.06.38AM.png" alt="" data-image-width="530" data-image-height="398">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-2" src="images/ScreenShot2021-11-12at8.06.29AM.png" alt="" data-image-width="528" data-image-height="396">
+                    </div>
+                  </div>
+                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                    <div class="u-container-layout u-container-layout-2">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-3" src="images/ScreenShot2021-11-12at8.06.21AM.png" alt="" data-image-width="528" data-image-height="396">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-4" src="images/ScreenShot2021-11-12at8.06.10AM.png" alt="" data-image-width="530" data-image-height="396">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-3">
+                    <div class="u-container-layout u-container-layout-3">
+                      <h2 class="u-align-center u-text u-text-1">Two Successes</h2>
+                      <p class="u-align-left u-text u-text-2">Pictured above were two apparent succcesses. These likely succeeded because their face shape is pretty average and the image is straight on. Additionally, there is little augmentation in the two images.</p>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-4" src="">
+                    <div class="u-container-layout u-valign-top u-container-layout-4">
+                      <h2 class="u-align-center u-text u-text-3">Two Failures</h2>
+                      <p class="u-align-left u-text u-text-4">Pictured above were two apparent failures. The first failure was likely because of the turned head however the model was still able learn a shape that looks almost like a turned head. My theory for the second failure is that it is an extreme rotation (i.e. the rotation is the farthest rotation possibly in my code thus has little training data for it).</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="u-subtitle u-text u-text-default u-text-5">
+          <span style="font-weight: 400;">4. Kernel Visualization</span>
+          <br>
+        </h2>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-5">
+                <img class="u-image u-image-contain u-image-default u-image-5" src="images/part2_first_layer_kernels.png" alt="" data-image-width="468" data-image-height="466">
+                <p class="u-align-center u-custom-item u-large-text u-text u-text-default u-text-variant u-text-6">Learned kernels from the medium network's first layer</p>
+              </div>
+            </div>
+            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-6">
+                <img class="u-image u-image-contain u-image-default u-image-6" src="images/large_model_filters.png" alt="" data-image-width="958" data-image-height="520">
+                <p class="u-align-center u-custom-item u-large-text u-text u-text-default u-text-variant u-text-7">Learned Kernels from the large network's first layer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="u-large-text u-text u-text-variant u-text-8">One obversations I had about these kernels, particularly in the larger model's learned kernels, is that a few of the kernels very clearly do actually look like edge detectors.&nbsp;</p>
+      </div>
+    </section>
+    <section class="u-clearfix u-white u-section-11" id="sec-a149">
+      <div class="u-black u-expanded-width u-shape u-shape-rectangle u-shape-1"></div>
+      <h1 class="u-text u-text-default u-text-white u-text-1">
+        <span style="font-weight: 700;">Training on Large Dataset</span>
+        <br>
+      </h1>
+      <h2 class="u-subtitle u-text u-text-default u-text-2">
+        <span style="font-weight: 400;">1. Dataset and Preprocessing</span>
+        <br>
+      </h2>
+      <p class="u-text u-text-3">With working experience of models, we now want to see if we can train on a truly larger dataset. The dataset I will be using is Zhe Cao's&nbsp;ibug_300W_large_face_landmark_dataset. This dataset contains 6666 images of faces with 68 annotated keypoints. Additionally, there is a final test set with&nbsp; ___ images. Given the 6666 images, I opted for a 85-15 split of training to validation images.&nbsp;<br>
+        <br>In many of the images, the actual faces only take up a small portion of the image. As a result, I cropped the images such that the face made up the majority of the frame. For this section, I also opted to train my models using colored images instead of grayscale images. For transformations, I once again applied color jitters, and random affine transformations. Finally, since I plan to use a pre-trained ResNet18 model, I normalize each image with the same means and standard deviations used in the ResNet paper as well as resized to be 224x224 pixels.
+      </p>
+      <img class="u-image u-image-default u-image-1" src="images/ScreenShot2021-11-12at3.04.34PM.png" alt="" data-image-width="1600" data-image-height="382">
+      <p class="u-align-center u-large-text u-text u-text-variant u-text-4">Pictured above are example training images after cropping and transformations.<br>**Note that colors are strange because of colorjitter and normalization transformations**
+      </p>
+    </section>
+    <section class="u-clearfix u-white u-section-12" id="sec-fa35">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-subtitle u-text u-text-default u-text-1">
+          <span style="font-weight: 400;">2. Model and Training</span>
+          <br>
+        </h2>
+        <p class="u-text u-text-2">I opted to implement transfer learning and train off of a pretrained ResNet18. After some experiments, I found that a learning rate of 1e-3 would often converge after 25-30 epochs thus I decided to add a learning rate scheduler that multiplied the learning rate by 0.1 after 30 epochs to get a little more fine-tuned accuracy.</p>
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-valign-top u-container-layout-1">
+                  <p class="u-large-text u-text u-text-default u-text-variant u-text-3">Model Architecture</p>
+                  <p class="u-large-text u-text u-text-default u-text-variant u-text-4">Pretrained ResNet18 with fully connnected layer replaced with a fully connected layer with 136 output nodes.</p>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-valign-bottom u-container-layout-2">
+                  <p class="u-large-text u-text u-text-default u-text-variant u-text-5">Training Parameters</p>
+                  <p class="u-large-text u-text u-text-default u-text-variant u-text-6">Input Image Size: 224x224<br>Optimizer: Adam<br>Loss Function: MSE<br>Learning Rate: 1e-3<br>LR Scheduler: gamma 0.1; step size 30<br>Batch Size: 32<br>Number of Epochs: 35
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-2">
+          <div class="u-layout" style="">
+            <div class="u-layout-row" style="">
+              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-29 u-size-xs-60 u-white u-layout-cell-3" src="">
+                <div class="u-container-layout u-container-layout-3">
+                  <h2 class="u-text u-text-default u-text-7">Training History</h2>
+                  <p class="u-text u-text-8">Pictured on the left is the loss history of the model while training. First observation is that validation data follows training data well meaning we are generalizing well. Additionally, we can clearly see that the learning rate scheduler (which took a step on epoch 30) helped the model achieve a little more improvement in the loss.<br>
+                  </p>
+                </div>
+              </div>
+              <div class="u-align-center u-container-style u-image u-image-contain u-layout-cell u-right-cell u-size-31 u-size-xs-60 u-image-1" src="" data-image-width="802" data-image-height="548">
+                <div class="u-container-layout u-valign-middle u-container-layout-4" src=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-white u-section-13" id="sec-d5f5">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-subtitle u-text u-text-default u-text-1">
+          <span style="font-weight: 400;">3. Results</span>
+          <br>
+        </h2>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                <img class="u-image u-image-default u-image-1" src="images/train_results.png" alt="" data-image-width="567" data-image-height="568">
+                <p class="u-align-center u-custom-item u-large-text u-text u-text-default u-text-variant u-text-2">Example Training Data Results<br>(Orange = Predictions)
+                </p>
+              </div>
+            </div>
+            <div class="u-container-style u-custom-item u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+                <img class="u-image u-image-default u-image-2" src="images/val_results.png" alt="" data-image-width="566" data-image-height="568">
+                <p class="u-align-center u-custom-item u-large-text u-text u-text-default u-text-variant u-text-3">Example Validation Data Results<br>(Orange = Predictions)<br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="u-image u-image-default u-image-3" src="images/test_results2.png" alt="" data-image-width="1144" data-image-height="568">
+        <p class="u-align-center u-custom-item u-large-text u-text u-text-default u-text-variant u-text-4">Test Data Results<br>(Blue = Predictions)
+        </p>
+        <p class="u-align-left u-large-text u-text u-text-variant u-text-5">Pictured above are the results of the trained model. Training data and validation data are both very accurate however there are some clear failures in the test data. Many of the failures in the test data happen in the images that have multiple people or have faces that are small in the frame. This is likely because the training data all was cropped to have images of singular faces where the face is most of the frame. The same augmentation was not possibly with test data because test data lacked accurate bounding boxes.</p>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-14" id="sec-9086">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-subtitle u-text u-text-default u-text-1">
+          <span style="font-weight: 400;">4. Fun Experiments</span>
+          <br>
+        </h2>
+        <p class="u-text u-text-2">Given a working model, I wanted to test my model on some of my own photos. In particular, I wanted to experiment on out-of-distribution photos. The four photos I decided to test was an image of a gorilla's face, a person's face with a mask, a person's face obscured by hair, and a simple baseline person. Pictured below are the results.<br>
+        </p>
+        <img class="u-image u-image-default u-image-1" src="images/experiments.png" alt="" data-image-width="852" data-image-height="856">
+        <p class="u-text u-text-3">Evidently the gorilla image failed. Interestingly, the image with the face mask is able to find the correct shape of the face but is clearly lost on the fine details such as a nose and mouth. For the image obscured by hair, the model also struggles to find the eyes. Both of these observations are actually good because they suggest that the network actually learns the features corresponding to each keypoint.</p>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-15" id="sec-3b0d">
+      <div class="u-black u-expanded-width u-shape u-shape-rectangle u-shape-1"></div>
+      <h1 class="u-text u-text-default u-text-white u-text-1">
+        <span style="font-weight: 700;">Bells and Whistles</span>
+        <br>
+      </h1>
+      <p class="u-large-text u-text u-text-default u-text-variant u-text-2">Face Morphing (Revisited)</p>
+      <p class="u-text u-text-3">With an automatic facial keypoint detector, we now have a method to automate face morphing entirely. It is a faily simple process as well: use the neural network model to detect the keypoints and then pass these points into our face morphing algorithm. Pictured below is a face morph done between my housemates and our significant others produced without manually selecting any keypoints.</p>
+      <div class="u-video u-video-contain u-video-1">
+        <div class="embed-responsive embed-responsive-1">
+          <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" class="embed-responsive-item" src="https://www.youtube.com/embed/52-5mRrSIeI?mute=0&amp;showinfo=0&amp;controls=0&amp;start=0" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-3925"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">CS 194-26: Computational Photography and Computer Vision<br>Norman Karr | nkarr11@berkeley.edu | UC Berkeley
+        </p>
+      </div></footer>
+  </body>
+</html>
